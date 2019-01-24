@@ -4,7 +4,7 @@ JMS的全称是Java Message Service，JMS只是一个标准
 ConnectionFactory：是用于产生到JMS服务器的链接的工厂，
 pooledConnectionFactory：我们可以为工厂出来的连接建立一个pool
 JmsTemplate：Spring为我们提供的JmsTemplate类来实现消息的接收和发送。也是最核心的
-```java
+```
 	<!-- Spring提供的JMS工具类，它可以进行消息发送、接收等 -->  
 	<bean id="jmsTemplate" class="org.springframework.jms.core.JmsTemplate">  
 	    <!-- 这个connectionFactory对应的是我们定义的Spring提供的那个ConnectionFactory对象 -->  
@@ -12,7 +12,7 @@ JmsTemplate：Spring为我们提供的JmsTemplate类来实现消息的接收和�
 	</bean>  
 ```
 Destination：消息发送的目的地，ActiveMQ中实现了两种类型的Destination，一个是点对点的ActiveMQQueue，另一个就是支持订阅/发布模式的ActiveMQTopic
-```java
+```
 	<!--这个是队列目的地，点对点的-->  
 	<bean id="queueDestination" class="org.apache.activemq.command.ActiveMQQueue">  
 	    <constructor-arg>  
