@@ -51,8 +51,9 @@ http://localhost:8161/admin/queues.jsp
 注意事项：
 1.消息监听时候会出现消息出现异常不能回滚，是由于你处理了异常或者是你没有抛出RuntimeException，只有在抛出是运行时异常时候才会回滚消息
 2.回滚消息可以在Number Of Pending Messages可以看到挂起的消息队列。有兴趣的可以自己测试一下
-3.使用JTA做的数据库的事务管理，可以使用分布式的消息监听
-http://www.jakubkorab.net/2011/08/configuring-activemq-transactions-in-spring.html
-http://www.open-open.com/lib/view/open1400126457817.html
+3.使用JTA做的数据库的事务管理，可以使用分布式的消息监听 
+
+- http://www.jakubkorab.net/2011/08/configuring-activemq-transactions-in-spring.html
+- http://www.open-open.com/lib/view/open1400126457817.html
 
 
